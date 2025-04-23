@@ -1,6 +1,6 @@
 
 class Pasajero:
-    def _init_(self, nombre, edad, sexo, clase, valor_del_tiquete, es_infante=False):
+    def __init__(self, nombre, edad, sexo, clase, valor_del_tiquete, es_infante=False):
         if not nombre:
             raise ValueError("El nombre del pasajero no puede estar vacío.")
         
