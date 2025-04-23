@@ -114,22 +114,22 @@ class Pasajero:
 
 
 class PasajeroEconomico(Pasajero):
-    def _init_(self, nombre, edad, sexo, valor_del_tiquete):
+    def __init__(self, nombre, edad, sexo, valor_del_tiquete):
         super()._init_(nombre, edad, sexo, "economica", valor_del_tiquete)
 
 
 class PasajeroEjecutivo(Pasajero):
-    def _init_(self, nombre, edad, sexo, valor_del_tiquete):
+    def __init__(self, nombre, edad, sexo, valor_del_tiquete):
         super()._init_(nombre, edad, sexo, "ejecutiva", valor_del_tiquete)
 
 
 class PasajeroPremium(Pasajero):
-    def _init_(self, nombre, edad, sexo, valor_del_tiquete):
+    def __init__(self, nombre, edad, sexo, valor_del_tiquete):
         super()._init_(nombre, edad, sexo, "premium", valor_del_tiquete)
 
 
 class CargaEspecial:
-    def _init_(self, tipo):
+    def __init__(self, tipo):
         self.__tipo = tipo.lower()
         if not tipo:
             raise ValueError("El tipo de carga especial no puede estar vacío.")
@@ -143,8 +143,8 @@ class CargaEspecial:
 
 
 class Bicicleta(CargaEspecial):
-    def _init_(self, peso):
-        super()._init_("bicicleta")
+    def __init__(self, peso):
+        super().__init__("bicicleta")
         try:
             self.__peso = float(peso)
             if self.__peso <= 0:
@@ -161,8 +161,8 @@ class Bicicleta(CargaEspecial):
 
 
 class Mascota(CargaEspecial):
-    def _init_(self, animal):
-        super()._init_("mascota")
+    def __init__(self, animal):
+        super().__init__("mascota")
         self.__animal = animal.lower()
         if self.__animal not in ["perro", "gato"]:
             raise ValueError("Solo se permiten perros o gatos como mascotas.")
@@ -180,7 +180,7 @@ class Mascota(CargaEspecial):
 
 
 class Vuelo:
-    def _init_(self, origen, destino):
+    def __init__(self, origen, destino):
         self.__origen = origen
         self.__destino = destino
         self.__pasajeros = []
@@ -221,7 +221,7 @@ class Vuelo:
 
 
 class Aerolinea:
-    def _init_(self, nombre):
+    def __init__(self, nombre):
         self.__nombre = nombre
         self.__vuelos = []
         self.__total_recaudo_tiquetes = 0
