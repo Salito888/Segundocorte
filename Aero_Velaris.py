@@ -115,17 +115,17 @@ class Pasajero:
 
 class PasajeroEconomico(Pasajero):
     def __init__(self, nombre, edad, sexo, valor_del_tiquete):
-        super()._init_(nombre, edad, sexo, "economica", valor_del_tiquete)
+        super().__init__(nombre, edad, sexo, "economica", valor_del_tiquete)
 
 
 class PasajeroEjecutivo(Pasajero):
     def __init__(self, nombre, edad, sexo, valor_del_tiquete):
-        super()._init_(nombre, edad, sexo, "ejecutiva", valor_del_tiquete)
+        super().__init__(nombre, edad, sexo, "ejecutiva", valor_del_tiquete)
 
 
 class PasajeroPremium(Pasajero):
     def __init__(self, nombre, edad, sexo, valor_del_tiquete):
-        super()._init_(nombre, edad, sexo, "premium", valor_del_tiquete)
+        super().__init__(nombre, edad, sexo, "premium", valor_del_tiquete)
 
 
 class CargaEspecial:
